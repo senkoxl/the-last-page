@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Un detalle especial para ti ❤️</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Librería para el efecto de confeti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  </head>
+  <body>
+    <!-- Fondo animado con corazones -->
+    <div class="bg-hearts" id="bgHearts"></div>
+
+    <main class="main-container">
+      <!-- PANTALLA 1: EL SOBRE CERRADO DE BIENVENIDA -->
+      <div class="envelope-wrapper" id="envelopeWrapper">
+        <div class="envelope" id="envelopeObj">
+          <div class="flap"></div>
+          <div class="pocket"></div>
+          <div class="envelope-card">
+            <h1 class="welcome-title">Hola, mi amor 💕</h1>
+            <p class="welcome-sub">Tengo una sorpresa especial para ti...</p>
+            <button class="btn-open" id="btnOpen">Abrir carta ✨</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- PANTALLA 2: LA CARTA INTERACTIVA -->
+      <article class="letter-card hidden" id="letterCard">
+        <header class="letter-header">
+          <h2>Para el amor de mi vida ❤️</h2>
+          <span class="letter-date">Un momento especial</span>
+        </header>
+
+        <section class="letter-body">
+          <p>Querida <strong>Valeria</strong>,</p>
+
+          <p>
+            Hoy quiero dejar de lado todas las cosas malas que están sucediendo
+            para recordarte lo mucho que significas para mí. Sé que te mandé la
+            carta, pero creo que estaba hecha un poco a la carrera y no estaba
+            tan linda, pero bueno... el caso.
+          </p>
+
+          <p>
+            Mi vida —si me permites llamarte así por hoy, claro—, quiero decirte
+            que de verdad estoy
+            <span
+              class="tooltip-word"
+              data-tooltip="¡Nadie ha trabajado tan duro como tú para lograrlo! 🎓✨"
+              >muy orgulloso de ti</span
+            >. Estás a punto de terminar una etapa muy importante de tu vida y
+            de ahora en adelante vienen muchísimas cosas que van a cambiar,
+            experiencias nuevas y mil cosas más. En serio no te imaginas cómo
+            estoy de contento por ti, me siento demasiado orgulloso por haber
+            estado junto a una persona tan inteligente, tan creativa y sobre
+            todo tan espectacular.
+          </p>
+
+          <p>
+            Creo que eres una de las personas más interesantes que he conocido y
+            conoceré. El haberte conocido le dio un
+            <span
+              class="tooltip-word"
+              data-tooltip="Llegaste a iluminar todos mis días 🌟"
+              >brillo impresionante a mi vida</span
+            >. En serio creo que eres de las mejores cosas que me han pasado, me
+            has ayudado en mil cosas y sobre todo me has ayudado a salir de mis
+            peores momentos; te lo agradezco como no tienes idea.
+          </p>
+
+          <p>
+            Eres y siempre serás el amor de mi vida.
+            <span
+              class="tooltip-word"
+              data-tooltip="¡Cada vez que te veo siento exactamente lo mismo que el primer día! 🦋"
+              >No puedo evitar verte y sentir maripositas</span
+            >. ¿Te amo, sí? Muchas felicidades por esto, estás a un paso de por
+            fin salir de ese hueco jajaja. Te adoro mi vida, me encantas. Espero
+            que hayas tenido un muy bonito día, me encantas.
+          </p>
+
+          <!-- FOTO ESTILO POLAROID -->
+          <figure class="polaroid-frame">
+            <img
+              src="valeriayyo.jpeg"
+              alt="Recuerdo especial"
+              id="polaroidImg"
+            />
+            <figcaption class="polaroid-caption">
+              Orgulloso de ti hoy y siempre 📸❤️
+            </figcaption>
+          </figure>
+
+          <!-- SECCIÓN DE CUPONES -->
+          <section class="coupons-section">
+            <h3>🎁 Cupones especiales para ti (Haz clic para canjear):</h3>
+            <div class="coupons-grid">
+              <button
+                class="coupon-btn"
+                onclick="claimCoupon(this, 'Una cena de celebración ')"
+              >
+                🎟️ cupon para salir a cenar lo que tu quieras
+              </button>
+              <button
+                class="coupon-btn"
+                onclick="claimCoupon(this, 'Noche de películas y mimos ')"
+              >
+                🎟️ cupon para ver la pelicula que tu quieras en el cine o en
+                casa
+              </button>
+              <button
+                class="coupon-btn"
+                onclick="claimCoupon(this, 'Un abrazo gigante e infinito ')"
+              >
+                🎟️ Cupon para un abrazo gigante
+              </button>
+              <button
+                class="coupon-btn"
+                onclick="claimCoupon(this, 'Un besote')"
+              >
+                🎟️ Cupon para un beso que dure toda la vida
+              </button>
+            </div>
+          </section>
+
+          <footer class="letter-footer">
+            <p>Con todo mi amor,</p>
+            <strong class="signature-name">Dylan 💕</strong>
+          </footer>
+        </section>
+      </article>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
